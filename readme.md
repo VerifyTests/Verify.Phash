@@ -14,7 +14,7 @@ Extends [Verify](https://github.com/SimonCropp/Verify) to allow comparison of do
 
 Contains [comparers](https://github.com/SimonCropp/Verify/blob/master/docs/comparer.md) for png, jpg, bmp, and tiff.
 
-Support is available via a [Tidelift Subscription](https://tidelift.com/subscription/pkg/nuget-verify.aspose?utm_source=nuget-verify.aspose&utm_medium=referral&utm_campaign=enterprise).
+Support is available via a [Tidelift Subscription](https://tidelift.com/subscription/pkg/nuget-verify.phash?utm_source=nuget-verify.phash&utm_medium=referral&utm_campaign=enterprise).
 
 <!-- toc -->
 ## Contents
