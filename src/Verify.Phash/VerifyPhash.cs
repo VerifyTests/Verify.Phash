@@ -1,0 +1,56 @@
+﻿using System.Drawing;
+using System.IO;
+using Shipwreck.Phash;
+using Shipwreck.Phash.Bitmaps;
+using Verify;
+
+public static class VerifyPhash
+{
+    public static void Initialize()
+    {
+        RegisterComparer("png");
+    }
+
+    public static void RegisterComparer(
+        string extension,
+        float threshold = 0.999f,
+        float sigma = 3.5f,
+        float gamma = 1f,
+        int angles = 180)
+    {
+        Guard.AgainstNullOrEmpty(extension, nameof(extension));
+        SharedVerifySettings.RegisterComparer(
+            extension,
+            (settings, stream1, stream2) => Compare(settings, stream1, stream2, threshold, sigma, gamma, angles));
+    }
+
+    static bool Compare(
+        VerifySettings settings,
+        Stream stream1,
+        Stream stream2,
+        float threshold,
+        float sigma,
+        float gamma,
+        int angles)
+    {
+        if (settings.GetPhashCompareSettings(out var innerSettings))
+        {
+            threshold = innerSettings.Threshold;
+            sigma = innerSettings.Sigma;
+            gamma = innerSettings.Gamma;
+            angles = innerSettings.Angles;
+        }
+
+        var hash1 = HashImage(stream1, sigma, gamma, angles);
+        var hash2 = HashImage(stream2, sigma, gamma, angles);
+        var score = ImagePhash.GetCrossCorrelation(hash1, hash2);
+        return score > threshold;
+    }
+
+    static Digest HashImage(Stream stream, float sigma, float gamma, int angles)
+    {
+        using var bitmap = (Bitmap) Image.FromStream(stream);
+        var image = bitmap.ToLuminanceImage();
+        return ImagePhash.ComputeDigest(image, sigma, gamma, angles);
+    }
+}
