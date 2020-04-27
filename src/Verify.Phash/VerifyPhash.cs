@@ -1,5 +1,6 @@
 ﻿using System.Drawing;
 using System.IO;
+using System.Threading.Tasks;
 using Shipwreck.Phash;
 using Shipwreck.Phash.Bitmaps;
 using Verify;
@@ -21,13 +22,13 @@ public static class VerifyPhash
         Guard.AgainstNullOrEmpty(extension, nameof(extension));
         SharedVerifySettings.RegisterComparer(
             extension,
-            (settings, stream1, stream2) => Compare(settings, stream1, stream2, threshold, sigma, gamma, angles));
+            (settings, received, verified) => Compare(settings, received, verified, threshold, sigma, gamma, angles));
     }
 
-    static bool Compare(
+    static Task<CompareResult> Compare(
         VerifySettings settings,
-        Stream stream1,
-        Stream stream2,
+        Stream received,
+        Stream verified,
         float threshold,
         float sigma,
         float gamma,
@@ -41,10 +42,15 @@ public static class VerifyPhash
             angles = innerSettings.Angles;
         }
 
-        var hash1 = HashImage(stream1, sigma, gamma, angles);
-        var hash2 = HashImage(stream2, sigma, gamma, angles);
+        var hash1 = HashImage(received, sigma, gamma, angles);
+        var hash2 = HashImage(verified, sigma, gamma, angles);
         var score = ImagePhash.GetCrossCorrelation(hash1, hash2);
-        return score > threshold;
+        var compare = score > threshold;
+        if (compare)
+        {
+            return Task.FromResult(CompareResult.Equal);
+        }
+        return Task.FromResult(CompareResult.NotEqual($"diff > threshold. threshold: {threshold}, score: {score}"));
     }
 
     static Digest HashImage(Stream stream, float sigma, float gamma, int angles)
