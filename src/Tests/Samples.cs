@@ -5,6 +5,7 @@ using VerifyNUnit;
 using NUnit.Framework;
 
 #region TestDefinition
+[TestFixture]
 public class Samples
 {
     static Samples()
