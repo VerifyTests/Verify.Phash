@@ -36,6 +36,7 @@ Given a test with the following definition:
 <!-- snippet: TestDefinition -->
 <a id='snippet-testdefinition'/></a>
 ```cs
+[TestFixture]
 public class Samples
 {
     static Samples()
@@ -43,7 +44,7 @@ public class Samples
         VerifyPhash.Initialize();
     }
 ```
-<sup><a href='/src/Tests/Samples.cs#L7-L14' title='File snippet `testdefinition` was extracted from'>snippet source</a> | <a href='#snippet-testdefinition' title='Navigate to start of snippet `testdefinition`'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L7-L15' title='File snippet `testdefinition` was extracted from'>snippet source</a> | <a href='#snippet-testdefinition' title='Navigate to start of snippet `testdefinition`'>anchor</a></sup>
 <!-- endsnippet -->
 
 
