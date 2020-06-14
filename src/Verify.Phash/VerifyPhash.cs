@@ -6,7 +6,6 @@ using Shipwreck.Phash.Bitmaps;
 
 namespace VerifyTests
 {
-
     public static class VerifyPhash
     {
         public static void Initialize()
