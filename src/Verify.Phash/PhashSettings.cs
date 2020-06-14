@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 
-namespace Verify
+namespace VerifyTests
 {
     public static class PhashSettings
     {
