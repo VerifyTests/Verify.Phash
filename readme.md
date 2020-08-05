@@ -37,7 +37,7 @@ https://nuget.org/packages/Verify.Phash/
 Given a test with the following definition:
 
 <!-- snippet: TestDefinition -->
-<a id='snippet-testdefinition'/></a>
+<a id='snippet-testdefinition'></a>
 ```cs
 [TestFixture]
 public class Samples
