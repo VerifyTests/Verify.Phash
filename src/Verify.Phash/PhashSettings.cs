@@ -12,7 +12,7 @@ namespace VerifyTests
             int angles = 180)
         {
             Guard.AgainstNull(settings, nameof(settings));
-            settings.Data["Phash"] = new PhashCompareSettings(
+            settings.Context["Phash"] = new PhashCompareSettings(
                 threshold,
                 sigma,
                 gamma,
@@ -24,7 +24,7 @@ namespace VerifyTests
             [NotNullWhen(true)] out PhashCompareSettings? pagesSettings)
         {
             Guard.AgainstNull(settings, nameof(settings));
-            if (settings.Data.TryGetValue("Phash", out var value))
+            if (settings.Context.TryGetValue("Phash", out var value))
             {
                 pagesSettings = (PhashCompareSettings) value;
                 return true;
