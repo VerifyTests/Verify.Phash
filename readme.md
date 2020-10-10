@@ -37,7 +37,7 @@ https://nuget.org/packages/Verify.Phash/
 Given a test with the following definition:
 
 <!-- snippet: TestDefinition -->
-<a id='17cf947a'></a>
+<a id='testdefinition'></a>
 ```cs
 [TestFixture]
 public class Samples
@@ -47,7 +47,7 @@ public class Samples
         VerifyPhash.Initialize();
     }
 ```
-<sup><a href='/src/Tests/Samples.cs#L7-L15' title='Snippet source file'>snippet source</a> | <a href='#17cf947a' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L7-L15' title='Snippet source file'>snippet source</a> | <a href='#testdefinition' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
