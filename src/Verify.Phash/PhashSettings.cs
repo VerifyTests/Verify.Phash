@@ -1,4 +1,5 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 
 namespace VerifyTests
 {
@@ -20,11 +21,11 @@ namespace VerifyTests
         }
 
         internal static bool GetPhashCompareSettings(
-            this VerifySettings settings,
+            this IReadOnlyDictionary<string, object> context,
             [NotNullWhen(true)] out PhashCompareSettings? pagesSettings)
         {
-            Guard.AgainstNull(settings, nameof(settings));
-            if (settings.Context.TryGetValue("Phash", out var value))
+            Guard.AgainstNull(context, nameof(context));
+            if (context.TryGetValue("Phash", out var value))
             {
                 pagesSettings = (PhashCompareSettings) value;
                 return true;

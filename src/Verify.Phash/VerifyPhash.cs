@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Threading.Tasks;
 using Shipwreck.Phash;
@@ -23,11 +24,11 @@ namespace VerifyTests
             Guard.AgainstNullOrEmpty(extension, nameof(extension));
             VerifierSettings.RegisterComparer(
                 extension,
-                (settings, received, verified) => Compare(settings, received, verified, threshold, sigma, gamma, angles));
+                (received, verified, context) => Compare(context, received, verified, threshold, sigma, gamma, angles));
         }
 
         static Task<CompareResult> Compare(
-            VerifySettings settings,
+            IReadOnlyDictionary<string, object> context,
             Stream received,
             Stream verified,
             float threshold,
@@ -35,7 +36,7 @@ namespace VerifyTests
             float gamma,
             int angles)
         {
-            if (settings.GetPhashCompareSettings(out var innerSettings))
+            if (context.GetPhashCompareSettings(out var innerSettings))
             {
                 threshold = innerSettings.Threshold;
                 sigma = innerSettings.Sigma;
