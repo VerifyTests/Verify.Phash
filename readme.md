@@ -49,7 +49,7 @@ public class Samples
 Register all comparers
 
 ```
-VerifyPhash.RegisterComparers();
+VerifyPhash.RegisterComparer();
 ```
 
 
