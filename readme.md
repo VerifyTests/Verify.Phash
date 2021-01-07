@@ -17,6 +17,7 @@ Part of the <a href='https://dotnetfoundation.org' alt=''>.NET Foundation</a>
 
   * [Usage](#usage)
     * [Comparers](#comparers)
+    * [Compare Settings](#compare-settings)
   * [Security contact information](#security-contact-information)<!-- endToc -->
 
 
@@ -40,7 +41,7 @@ public class Samples
         VerifyPhash.Initialize();
     }
 ```
-<sup><a href='/src/Tests/Samples.cs#L7-L15' title='Snippet source file'>snippet source</a> | <a href='#snippet-testdefinition' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L7-L17' title='Snippet source file'>snippet source</a> | <a href='#snippet-testdefinition' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -51,6 +52,27 @@ Register all comparers
 ```
 VerifyPhash.RegisterComparer();
 ```
+
+### Compare Settings
+
+Phash comparison settings can be modified as follows:
+
+<!-- snippet: Settings -->
+<a id='snippet-settings'></a>
+```cs
+[Test]
+public Task LocalSettings()
+{
+    return Verifier.VerifyFile("sample.png")
+        .PhashCompareSettings(
+            threshold: .8f,
+            sigma: 4f,
+            gamma: 2f,
+            angles: 170);
+}
+```
+<sup><a href='/src/Tests/Samples.cs#L49-L62' title='Snippet source file'>snippet source</a> | <a href='#snippet-settings' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
 
 
 ## Security contact information
