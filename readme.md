@@ -71,7 +71,7 @@ public Task LocalSettings()
             angles: 170);
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L49-L62' title='Snippet source file'>snippet source</a> | <a href='#snippet-settings' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L48-L61' title='Snippet source file'>snippet source</a> | <a href='#snippet-settings' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 

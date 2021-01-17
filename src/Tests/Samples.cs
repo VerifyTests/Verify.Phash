@@ -17,12 +17,11 @@ public class Samples
     #endregion
 
     [Test]
-    public async Task Simple()
+    public Task Simple()
     {
         var settings = new VerifySettings();
         settings.UseExtension("png");
-        await Verifier.Verify(File.OpenRead("sample.png"), settings);
-        await Verifier.Verify(File.OpenRead("sample2.png"), settings);
+        return Verifier.Verify(File.OpenRead("sample.png"), settings);
     }
 
     #region VerifyPng
