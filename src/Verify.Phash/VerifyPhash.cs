@@ -22,7 +22,7 @@ namespace VerifyTests
             int angles = 180)
         {
             Guard.AgainstNullOrEmpty(extension, nameof(extension));
-            VerifierSettings.RegisterComparer(
+            VerifierSettings.RegisterStreamComparer(
                 extension,
                 (received, verified, context) => Compare(context, received, verified, threshold, sigma, gamma, angles));
         }
