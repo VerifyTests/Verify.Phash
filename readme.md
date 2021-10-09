@@ -31,7 +31,7 @@ public class Samples
         VerifyPhash.Initialize();
     }
 ```
-<sup><a href='/src/Tests/Samples.cs#L7-L17' title='Snippet source file'>snippet source</a> | <a href='#snippet-testdefinition' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L5-L15' title='Snippet source file'>snippet source</a> | <a href='#snippet-testdefinition' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -61,7 +61,7 @@ public Task LocalSettings()
             angles: 170);
 }
 ```
-<sup><a href='/src/Tests/Samples.cs#L48-L61' title='Snippet source file'>snippet source</a> | <a href='#snippet-settings' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L46-L59' title='Snippet source file'>snippet source</a> | <a href='#snippet-settings' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
