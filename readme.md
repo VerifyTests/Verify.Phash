@@ -53,7 +53,7 @@ Phash comparison settings can be modified as follows:
 [Test]
 public Task LocalSettings()
 {
-    return Verifier.VerifyFile("sample.png")
+    return VerifyFile("sample.png")
         .PhashCompareSettings(
             threshold: .8f,
             sigma: 4f,
