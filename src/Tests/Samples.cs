@@ -19,7 +19,7 @@ public class Samples
     {
         var settings = new VerifySettings();
         settings.UseExtension("png");
-        return Verifier.Verify(File.OpenRead("sample.png"), settings);
+        return Verify(File.OpenRead("sample.png"), settings);
     }
 
     #region VerifyPng
@@ -27,7 +27,7 @@ public class Samples
     [Test]
     public Task VerifyPng()
     {
-        return Verifier.VerifyFile("sample.png");
+        return VerifyFile("sample.png");
     }
 
     #endregion
@@ -37,7 +37,7 @@ public class Samples
     [Test]
     public Task VerifyPdfStream()
     {
-        return Verifier.Verify(File.OpenRead("sample.png"))
+        return Verify(File.OpenRead("sample.png"))
             .UseExtension("png");
     }
 
@@ -48,7 +48,7 @@ public class Samples
     [Test]
     public Task LocalSettings()
     {
-        return Verifier.VerifyFile("sample.png")
+        return VerifyFile("sample.png")
             .PhashCompareSettings(
                 threshold: .8f,
                 sigma: 4f,
