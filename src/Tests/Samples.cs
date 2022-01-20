@@ -1,8 +1,4 @@
-﻿using VerifyTests;
-using VerifyNUnit;
-using NUnit.Framework;
-
-#region TestDefinition
+﻿#region TestDefinition
 
 [TestFixture]
 public class Samples
