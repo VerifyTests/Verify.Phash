@@ -6,10 +6,8 @@ namespace VerifyTests;
 
 public static class VerifyPhash
 {
-    public static void Initialize()
-    {
+    public static void Initialize() =>
         RegisterComparer("png");
-    }
 
     public static void RegisterComparer(
         string extension,

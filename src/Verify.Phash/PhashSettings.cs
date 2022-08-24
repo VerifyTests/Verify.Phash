@@ -9,10 +9,8 @@ public static class PhashSettings
         float threshold = 0.999f,
         float sigma = 3.5f,
         float gamma = 1f,
-        int angles = 180)
-    {
+        int angles = 180) =>
         PhashCompareSettings(threshold, sigma, gamma, angles, settings.Context);
-    }
 
     public static SettingsTask PhashCompareSettings(
         this SettingsTask settings,
@@ -30,14 +28,12 @@ public static class PhashSettings
         float sigma,
         float gamma,
         int angles,
-        Dictionary<string, object> context)
-    {
+        Dictionary<string, object> context) =>
         context["Phash"] = new PhashCompareSettings(
             threshold,
             sigma,
             gamma,
             angles);
-    }
 
     internal static bool GetPhashCompareSettings(
         this IReadOnlyDictionary<string, object> context,

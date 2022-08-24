@@ -24,12 +24,11 @@ Given a test with the following definition:
 [TestFixture]
 public class Samples
 {
-    static Samples()
-    {
+    [ModuleInitializer]
+    public static void Init() =>
         VerifyPhash.Initialize();
-    }
 ```
-<sup><a href='/src/Tests/Samples.cs#L1-L11' title='Snippet source file'>snippet source</a> | <a href='#snippet-testdefinition' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L1-L10' title='Snippet source file'>snippet source</a> | <a href='#snippet-testdefinition' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -49,17 +48,15 @@ Phash comparison settings can be modified as follows:
 <a id='snippet-settings'></a>
 ```cs
 [Test]
-public Task LocalSettings()
-{
-    return VerifyFile("sample.png")
+public Task LocalSettings() =>
+    VerifyFile("sample.png")
         .PhashCompareSettings(
             threshold: .8f,
             sigma: 4f,
             gamma: 2f,
             angles: 170);
-}
 ```
-<sup><a href='/src/Tests/Samples.cs#L42-L55' title='Snippet source file'>snippet source</a> | <a href='#snippet-settings' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L34-L45' title='Snippet source file'>snippet source</a> | <a href='#snippet-settings' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 

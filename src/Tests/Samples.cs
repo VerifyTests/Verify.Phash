@@ -3,54 +3,44 @@
 [TestFixture]
 public class Samples
 {
-    static Samples()
-    {
+    [ModuleInitializer]
+    public static void Init() =>
         VerifyPhash.Initialize();
-    }
 
     #endregion
 
     [Test]
-    public Task Simple()
-    {
-        var settings = new VerifySettings();
-        settings.UseExtension("png");
-        return Verify(File.OpenRead("sample.png"), settings);
-    }
+    public Task Simple() =>
+        Verify(File.OpenRead("sample.png"))
+            .UseExtension("png");
 
     #region VerifyPng
 
     [Test]
-    public Task VerifyPng()
-    {
-        return VerifyFile("sample.png");
-    }
+    public Task VerifyPng() =>
+        VerifyFile("sample.png");
 
     #endregion
 
     #region VerifyPngStream
 
     [Test]
-    public Task VerifyPdfStream()
-    {
-        return Verify(File.OpenRead("sample.png"))
+    public Task VerifyPdfStream() =>
+        Verify(File.OpenRead("sample.png"))
             .UseExtension("png");
-    }
 
     #endregion
 
     #region Settings
 
     [Test]
-    public Task LocalSettings()
-    {
-        return VerifyFile("sample.png")
+    public Task LocalSettings() =>
+        VerifyFile("sample.png")
             .PhashCompareSettings(
                 threshold: .8f,
                 sigma: 4f,
                 gamma: 2f,
                 angles: 170);
-    }
 
     #endregion
 }
