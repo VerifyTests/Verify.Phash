@@ -8,27 +8,23 @@ Extends [Verify](https://github.com/VerifyTests/Verify) to allow comparison of d
 Contains [comparers](https://github.com/VerifyTests/Verify/blob/master/docs/comparer.md) for png, jpg, bmp, and tiff.
 
 
-
 ## NuGet package
 
 https://nuget.org/packages/Verify.Phash/
 
-
 ## Usage
 
-Given a test with the following definition:
+Enable:
 
-<!-- snippet: TestDefinition -->
-<a id='snippet-testdefinition'></a>
+<!-- snippet: enable -->
+<a id='snippet-enable'></a>
 ```cs
-[TestFixture]
-public class Samples
+[ModuleInitializer]
+public static void Init()
 {
-    [ModuleInitializer]
-    public static void Init() =>
-        VerifyPhash.Initialize();
+    VerifyPhash.Initialize();
 ```
-<sup><a href='/src/Tests/Samples.cs#L1-L10' title='Snippet source file'>snippet source</a> | <a href='#snippet-testdefinition' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/ModuleInit.cs#L3-L10' title='Snippet source file'>snippet source</a> | <a href='#snippet-enable' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -56,7 +52,7 @@ public Task LocalSettings() =>
             gamma: 2f,
             angles: 170);
 ```
-<sup><a href='/src/Tests/Samples.cs#L34-L45' title='Snippet source file'>snippet source</a> | <a href='#snippet-settings' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L26-L37' title='Snippet source file'>snippet source</a> | <a href='#snippet-settings' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 

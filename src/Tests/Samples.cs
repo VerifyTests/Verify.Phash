@@ -1,14 +1,6 @@
-﻿#region TestDefinition
-
-[TestFixture]
+﻿[TestFixture]
 public class Samples
 {
-    [ModuleInitializer]
-    public static void Init() =>
-        VerifyPhash.Initialize();
-
-    #endregion
-
     [Test]
     public Task Simple() =>
         Verify(File.OpenRead("sample.png"))
