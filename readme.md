@@ -52,7 +52,7 @@ public Task LocalSettings() =>
             gamma: 2f,
             angles: 170);
 ```
-<sup><a href='/src/Tests/Samples.cs#L26-L37' title='Snippet source file'>snippet source</a> | <a href='#snippet-settings' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Samples.cs#L27-L38' title='Snippet source file'>snippet source</a> | <a href='#snippet-settings' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
