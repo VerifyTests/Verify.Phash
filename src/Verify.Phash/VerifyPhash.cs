@@ -6,8 +6,11 @@ namespace VerifyTests;
 
 public static class VerifyPhash
 {
-    public static void Initialize() =>
+    public static void Initialize()
+    {
+        InnerVerifier.ThrowIfVerifyHasBeenRun();
         RegisterComparer("png");
+    }
 
     public static void RegisterComparer(
         string extension,
@@ -16,6 +19,7 @@ public static class VerifyPhash
         float gamma = 1f,
         int angles = 180)
     {
+        InnerVerifier.ThrowIfVerifyHasBeenRun();
         Guard.AgainstNullOrEmpty(extension, nameof(extension));
         VerifierSettings.RegisterStreamComparer(
             extension,
