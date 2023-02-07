@@ -6,8 +6,17 @@ namespace VerifyTests;
 
 public static class VerifyPhash
 {
+    public static bool Initialized { get; private set; }
+
     public static void Initialize()
     {
+        if (Initialized)
+        {
+            throw new("Already Initialized");
+        }
+
+        Initialized = true;
+
         InnerVerifier.ThrowIfVerifyHasBeenRun();
         RegisterComparer("png");
     }
