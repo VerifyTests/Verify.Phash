@@ -8,5 +8,6 @@
     <PackageTags>Aspose, Verify</PackageTags>
     <Description>Extends Verify (https://github.com/VerifyTests/Verify) to allow comparison of images via Phash.</Description>
     <SignAssembly>false</SignAssembly>
+    <ResolveAssemblyReferencesSilent>true</ResolveAssemblyReferencesSilent>
   </PropertyGroup>
 </Project>
