@@ -58,7 +58,6 @@ public Task LocalSettings() =>
 <!-- endSnippet -->
 
 
-
 ## Icon
 
 [Hash Brown](https://thenounproject.com/term/hash/1129857/) designed by [Icon Mark](https://thenounproject.com/iconmark) from [The Noun Project](https://thenounproject.com/).
