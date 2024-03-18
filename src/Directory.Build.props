@@ -9,5 +9,8 @@
     <Description>Extends Verify (https://github.com/VerifyTests/Verify) to allow comparison of images via Phash.</Description>
     <SignAssembly>false</SignAssembly>
     <ResolveAssemblyReferencesSilent>true</ResolveAssemblyReferencesSilent>
+    <NuGetAuditMode>all</NuGetAuditMode>
+    <NuGetAuditLevel>low</NuGetAuditLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
 </Project>
