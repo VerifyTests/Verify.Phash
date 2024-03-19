@@ -1,4 +1,6 @@
-﻿public class ModuleInit
+﻿[assembly: SupportedOSPlatform("windows")]
+
+public class ModuleInit
 {
     #region enable
 
