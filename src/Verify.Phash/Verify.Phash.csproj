@@ -3,11 +3,12 @@
     <TargetFrameworks>net48;net8.0-windows</TargetFrameworks>
   </PropertyGroup>
   <ItemGroup>
-    <!-- explicit ref to avoid CVE -->
-    <PackageReference Include="System.Drawing.Common" />
     <PackageReference Include="Shipwreck.Phash.Bitmaps" />
     <PackageReference Include="Polyfill" PrivateAssets="all" />
     <PackageReference Include="Verify" />
     <PackageReference Include="ProjectDefaults" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.Sbom.Targets" PrivateAssets="all" />
+    <!-- explicit ref to avoid CVE -->
+    <PackageReference Include="System.Drawing.Common" />
   </ItemGroup>
 </Project>
