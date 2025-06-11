@@ -11,9 +11,10 @@ Extends [Verify](https://github.com/VerifyTests/Verify) to allow comparison of d
 Contains [comparers](https://github.com/VerifyTests/Verify/blob/master/docs/comparer.md) for png, jpg, bmp, and tiff.
 
 
-## NuGet package
+## NuGet
 
-https://nuget.org/packages/Verify.Phash/
+ * https://nuget.org/packages/Verify.Phash
+
 
 ## Usage
 
