@@ -9,7 +9,7 @@
     <PackageVersion Include="NUnit" Version="4.4.0" />
     <PackageVersion Include="NUnit3TestAdapter" Version="5.2.0" />
     <PackageVersion Include="Polyfill" Version="9.3.0" />
-    <PackageVersion Include="ProjectDefaults" Version="1.0.162" />
+    <PackageVersion Include="ProjectDefaults" Version="1.0.163" />
     <PackageVersion Include="Shipwreck.Phash.Bitmaps" Version="0.5.0" />
     <PackageVersion Include="System.Drawing.Common" Version="10.0.0" />
     <PackageVersion Include="Verify" Version="31.7.2" />
