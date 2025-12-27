@@ -1,7 +1,7 @@
 # <img src="/src/icon.png" height="30px"> Verify.Phash
 
 [![Discussions](https://img.shields.io/badge/Verify-Discussions-yellow?svg=true&label=)](https://github.com/orgs/VerifyTests/discussions)
-[![Build status](https://ci.appveyor.com/api/projects/status/18lflc71pchw565r?svg=true)](https://ci.appveyor.com/project/SimonCropp/Verify-Phash)
+[![Build status](https://img.shields.io/appveyor/build/SimonCropp/Verify-Phash)](https://ci.appveyor.com/project/SimonCropp/Verify-Phash)
 [![NuGet Status](https://img.shields.io/nuget/v/Verify.Phash.svg)](https://www.nuget.org/packages/Verify.Phash/)
 
 Extends [Verify](https://github.com/VerifyTests/Verify) to allow comparison of documents via [Phash](https://github.com/pgrho/phash).<!-- singleLineInclude: intro. path: /docs/intro.include.md -->
