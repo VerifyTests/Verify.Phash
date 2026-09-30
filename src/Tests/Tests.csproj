@@ -12,7 +12,6 @@
     <PackageReference Include="EmptyFiles" />
     <PackageReference Include="SimpleInfoName" />
     <PackageReference Include="Verify" />
-    <PackageReference Include="Verify.DiffPlex" />
     <ProjectReference Include="..\Verify.Phash\Verify.Phash.csproj" />
     <PackageReference Include="ProjectDefaults" PrivateAssets="all" />
     <None Update="*.png">
