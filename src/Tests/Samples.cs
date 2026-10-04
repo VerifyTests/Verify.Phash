@@ -2,7 +2,7 @@ public class Samples
 {
     [Test]
     public Task Simple() =>
-        Verify(File.OpenRead("sample.png"));
+        Verify(ProjectFiles.Sample_png.OpenRead());
 
     #region VerifyPng
 

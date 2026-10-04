@@ -14,6 +14,7 @@
     <PackageReference Include="Verify" />
     <ProjectReference Include="..\Verify.Phash\Verify.Phash.csproj" />
     <PackageReference Include="ProjectDefaults" PrivateAssets="all" />
+    <PackageReference Include="ProjectFiles" PrivateAssets="all" />
     <None Update="*.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
